@@ -11,4 +11,4 @@ jobs:
     steps:
       - checkout
       - run:
-          command: aws cloudformation create-stack --region $AWS_DEFAULT_REGION --stack-name circle-ci-test --template-body file://sample-circle-ci-template.yml
+          command: aws cloudformation deploy --region $AWS_DEFAULT_REGION --stack-name circle-ci-test --template-body file://sample-circle-ci-template.yml
